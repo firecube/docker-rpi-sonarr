@@ -6,9 +6,9 @@ RUN apt-get update && apt-get install apt-transport-https -y --force-yes && \
     echo "deb https://apt.sonarr.tv/ master main" | sudo tee -a /etc/apt/sources.list && \
     apt-get update && apt-get install nzbdrone -y
     
-VOLUME /volumes/config
-VOLUME /volumes/data
-VOLUME /volumes/media
+VOLUME /config
+VOLUME /data
+VOLUME /media
 
 EXPOSE 8989
 EXPOSE 9897
